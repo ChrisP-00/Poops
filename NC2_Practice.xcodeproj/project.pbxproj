@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		832DEE412A90781600B3F58C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 839D27F22A8DAB1D001199D9 /* Assets.xcassets */; };
+		832DEE422A90781600B3F58C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 839D27F22A8DAB1D001199D9 /* Assets.xcassets */; };
+		832DEE452A90786100B3F58C /* Silom.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 832DEE442A90786100B3F58C /* Silom.ttf */; };
+		832DEE462A90786100B3F58C /* Silom.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 832DEE442A90786100B3F58C /* Silom.ttf */; };
+		832DEE472A90786100B3F58C /* Silom.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 832DEE442A90786100B3F58C /* Silom.ttf */; };
 		839D27E62A8DAB1D001199D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839D27E52A8DAB1D001199D9 /* AppDelegate.swift */; };
 		839D27E82A8DAB1D001199D9 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 839D27E72A8DAB1D001199D9 /* GameScene.sks */; };
 		839D27EA2A8DAB1D001199D9 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 839D27E92A8DAB1D001199D9 /* Actions.sks */; };
@@ -18,6 +23,10 @@
 		839D28002A8DAB1E001199D9 /* NC2_PracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839D27FF2A8DAB1E001199D9 /* NC2_PracticeTests.swift */; };
 		839D280A2A8DAB1E001199D9 /* NC2_PracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839D28092A8DAB1E001199D9 /* NC2_PracticeUITests.swift */; };
 		839D280C2A8DAB1E001199D9 /* NC2_PracticeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839D280B2A8DAB1E001199D9 /* NC2_PracticeUITestsLaunchTests.swift */; };
+		83B570732A9063F400F88370 /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B570722A9063F400F88370 /* GameOver.swift */; };
+		83B570752A90640B00F88370 /* GameOver.sks in Resources */ = {isa = PBXBuildFile; fileRef = 83B570742A90640B00F88370 /* GameOver.sks */; };
+		83F464B82A921E9800371CB6 /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B570722A9063F400F88370 /* GameOver.swift */; };
+		83F464B92A921E9800371CB6 /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B570722A9063F400F88370 /* GameOver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		832DEE442A90786100B3F58C /* Silom.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Silom.ttf; sourceTree = "<group>"; };
+		832DEE482A907AD200B3F58C /* NC2-Practice-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "NC2-Practice-Info.plist"; sourceTree = SOURCE_ROOT; };
 		839D27E22A8DAB1D001199D9 /* NC2_Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NC2_Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		839D27E52A8DAB1D001199D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		839D27E72A8DAB1D001199D9 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -52,6 +63,8 @@
 		839D28052A8DAB1E001199D9 /* NC2_PracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NC2_PracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		839D28092A8DAB1E001199D9 /* NC2_PracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NC2_PracticeUITests.swift; sourceTree = "<group>"; };
 		839D280B2A8DAB1E001199D9 /* NC2_PracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NC2_PracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		83B570722A9063F400F88370 /* GameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
+		83B570742A90640B00F88370 /* GameOver.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOver.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		832DEE432A90784A00B3F58C /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				832DEE442A90786100B3F58C /* Silom.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		839D27D92A8DAB1D001199D9 = {
 			isa = PBXGroup;
 			children = (
@@ -102,14 +123,18 @@
 		839D27E42A8DAB1D001199D9 /* NC2_Practice */ = {
 			isa = PBXGroup;
 			children = (
+				832DEE482A907AD200B3F58C /* NC2-Practice-Info.plist */,
 				839D27E52A8DAB1D001199D9 /* AppDelegate.swift */,
-				839D27E72A8DAB1D001199D9 /* GameScene.sks */,
 				839D27E92A8DAB1D001199D9 /* Actions.sks */,
+				839D27E72A8DAB1D001199D9 /* GameScene.sks */,
 				839D27EB2A8DAB1D001199D9 /* GameScene.swift */,
+				83B570742A90640B00F88370 /* GameOver.sks */,
+				83B570722A9063F400F88370 /* GameOver.swift */,
 				839D27ED2A8DAB1D001199D9 /* GameViewController.swift */,
 				839D27EF2A8DAB1D001199D9 /* Main.storyboard */,
 				839D27F22A8DAB1D001199D9 /* Assets.xcassets */,
 				839D27F42A8DAB1D001199D9 /* LaunchScreen.storyboard */,
+				832DEE432A90784A00B3F58C /* Font */,
 			);
 			path = NC2_Practice;
 			sourceTree = "<group>";
@@ -236,10 +261,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				839D27F12A8DAB1D001199D9 /* Main.storyboard in Resources */,
+				83B570752A90640B00F88370 /* GameOver.sks in Resources */,
 				839D27E82A8DAB1D001199D9 /* GameScene.sks in Resources */,
 				839D27F32A8DAB1D001199D9 /* Assets.xcassets in Resources */,
 				839D27F62A8DAB1D001199D9 /* LaunchScreen.storyboard in Resources */,
 				839D27EA2A8DAB1D001199D9 /* Actions.sks in Resources */,
+				832DEE452A90786100B3F58C /* Silom.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +274,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832DEE412A90781600B3F58C /* Assets.xcassets in Resources */,
+				832DEE462A90786100B3F58C /* Silom.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +283,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832DEE422A90781600B3F58C /* Assets.xcassets in Resources */,
+				832DEE472A90786100B3F58C /* Silom.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +298,7 @@
 				839D27EC2A8DAB1D001199D9 /* GameScene.swift in Sources */,
 				839D27EE2A8DAB1D001199D9 /* GameViewController.swift in Sources */,
 				839D27E62A8DAB1D001199D9 /* AppDelegate.swift in Sources */,
+				83B570732A9063F400F88370 /* GameOver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				839D28002A8DAB1E001199D9 /* NC2_PracticeTests.swift in Sources */,
+				83F464B82A921E9800371CB6 /* GameOver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83F464B92A921E9800371CB6 /* GameOver.swift in Sources */,
 				839D280A2A8DAB1E001199D9 /* NC2_PracticeUITests.swift in Sources */,
 				839D280C2A8DAB1E001199D9 /* NC2_PracticeUITestsLaunchTests.swift in Sources */,
 			);
@@ -445,6 +479,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7UK5M23JTU;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "NC2-Practice-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -458,9 +493,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Santa.NC2-Practice";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -473,6 +511,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7UK5M23JTU;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "NC2-Practice-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -486,9 +525,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Santa.NC2-Practice";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -505,9 +547,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Santa.NC2-PracticeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NC2_Practice.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NC2_Practice";
 			};
 			name = Debug;
@@ -525,9 +570,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Santa.NC2-PracticeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NC2_Practice.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NC2_Practice";
 			};
 			name = Release;
@@ -543,9 +591,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Santa.NC2-PracticeUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = NC2_Practice;
 			};
 			name = Debug;
@@ -561,9 +612,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Santa.NC2-PracticeUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = NC2_Practice;
 			};
 			name = Release;

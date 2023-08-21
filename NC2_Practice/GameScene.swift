@@ -6,83 +6,243 @@
 //
 
 import SpriteKit
-import GameplayKit
+import SwiftUI
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
-    private var label : SKLabelNode?
-    private var spinnyNode : SKShapeNode?
+    let playerCategory: UInt32 = 1 << 0 // 0000 0001 == 1
+    let poopCategory:UInt32 = 1 << 1    // 0000 0010 == 2
+    let itemCategory:UInt32 = 1 << 2    // 0000 0100 == 4
+    let groundCategory:UInt32 = 1 << 3  // 0000 1000 == 8
+    
+    private var currentSurvivalTimeLabel : SKLabelNode?
+    private var player : SKSpriteNode?
+    private var characterTextures: [SKTexture] = []
+    
+    // number of objects fall
+    private var numObj = 0
+    private var maxObj = 6
+    
+    var countTimer = Timer()
+    private var survivalTime = 0
+    private var bestRecord = UserDefaults.standard.integer(forKey: "bestRecord")
+    
+    // player movement
+    private var touchedLocation = CGPoint()
+    private var touchedDatumPoint = CGPoint()
+    private var playerDatumPoint: CGFloat = 0
+    
+    private var reverseDirection = false
+    private var datumPoint: CGFloat = 0
     
     override func didMove(to view: SKView) {
+        print("\(playerCategory)")
+        print("\(poopCategory)")
+        print("\(itemCategory)")
+        print("\(groundCategory)")
+        
+        print(reverseDirection)
+        self.physicsWorld.contactDelegate = self
+        
+        // survival timer
+        startTimer()
         
         // Get label node from scene and store it for use later
-        self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
-        if let label = self.label {
-            label.alpha = 0.0
-            label.run(SKAction.fadeIn(withDuration: 2.0))
-        }
+        self.currentSurvivalTimeLabel = self.childNode(withName: "//survivalTime") as? SKLabelNode
+        self.player = self.childNode(withName: "//player") as? SKSpriteNode
         
-        // Create shape node to use during mouse interaction
-        let w = (self.size.width + self.size.height) * 0.05
-        self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
+        // player idle animation
+        characterTextures.append(SKTexture(imageNamed: "playerIdle1"))
+        characterTextures.append(SKTexture(imageNamed: "playerIdle2"))
+        let animationIdle = SKAction.animate(with: characterTextures, timePerFrame: 0.5)
+        let animationIdleRepeat = SKAction.repeatForever(animationIdle)
+        player!.run(animationIdleRepeat)
         
-        if let spinnyNode = self.spinnyNode {
-            spinnyNode.lineWidth = 2.5
-            
-            spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: 1)))
-            spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
-                                              SKAction.fadeOut(withDuration: 0.5),
-                                              SKAction.removeFromParent()]))
-        }
+        // contactTestBitMask => Trigger, no interation
+        // collisionBitMask => Collider, yes interaction
+        // check player collision
+        player?.physicsBody?.categoryBitMask = playerCategory
+        player?.physicsBody?.contactTestBitMask = poopCategory | itemCategory
+        player?.physicsBody?.collisionBitMask = poopCategory | itemCategory | groundCategory
+        
+        // check ground collision
+        let ground = self.childNode(withName: "//ground") as? SKSpriteNode
+        ground?.physicsBody?.categoryBitMask = groundCategory
+        ground?.physicsBody?.contactTestBitMask = poopCategory | itemCategory
+        ground?.physicsBody?.collisionBitMask = poopCategory | itemCategory | playerCategory
+        
+        physicsWorld.gravity = CGVector(dx: 0, dy: -0.8)
     }
     
     
-    func touchDown(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.green
-            self.addChild(n)
+    // drop random objects
+    func dropObj() {
+        // random items & random position
+        let randomItem = Int.random(in: 1...2)
+        let randomX = Int.random(in: -355...355)
+        let randomY = Int.random(in: 680...1000)
+        
+        var obj = SKSpriteNode(imageNamed: "poop")
+        obj.position = CGPoint(x: randomX, y: randomY)
+        obj.name = "poop"
+        
+        obj.physicsBody = SKPhysicsBody.init(texture: obj.texture!, size: obj.size)
+        obj.physicsBody?.categoryBitMask = poopCategory
+        obj.physicsBody?.contactTestBitMask = groundCategory | playerCategory
+        addChild(obj)
+        
+        if (randomItem == 2) {
+            obj.name = "reverseItem"
+            obj.physicsBody = SKPhysicsBody.init(texture: obj.texture!, size: obj.size)
+            obj.texture = SKTexture(imageNamed: "reverseItem")
+            obj.physicsBody?.categoryBitMask = itemCategory
         }
+        numObj += 1
     }
     
-    func touchMoved(toPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.blue
-            self.addChild(n)
-        }
-    }
-    
-    func touchUp(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.red
-            self.addChild(n)
-        }
-    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let label = self.label {
-            label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
+        for touch in touches {
+            playerDatumPoint = player!.position.x
+            touchedDatumPoint = touch.location(in: self)
         }
-        
-        for t in touches { self.touchDown(atPoint: t.location(in: self)) }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchMoved(toPoint: t.location(in: self)) }
+        for touch in touches {
+            touchedLocation = touch.location(in: self)
+            if reverseDirection {
+                print("거꾸로")
+                reverseMovePlayer()
+            } else {
+                print("원래대로")
+                movePlayer()
+            }
+        }
     }
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
+    func reverseMovePlayer() {
+        let moveDirection = touchedDatumPoint.x - touchedLocation.x
+        print("움직임 방향 : \(moveDirection)")
+        
+        let playermove = playerDatumPoint + moveDirection
+        
+        if playermove < -375 + (player!.size.width / 2) {
+            player?.position.x = -375 + (player!.size.width / 2)
+        }
+        else if playermove > 375 - (player!.size.width / 2) {
+            player?.position.x = 375 - (player!.size.width / 2)
+        }
+        else {
+            player?.position.x = playermove
+        }
     }
     
-    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
+    func movePlayer() {
+        datumPoint = playerDatumPoint - touchedDatumPoint.x
+        
+       let playermove = datumPoint + touchedLocation.x
+        if playermove < -375 + (player!.size.width / 2) {
+            player?.position.x = -375 + (player!.size.width / 2)
+        }
+        else if playermove > 375 - (player!.size.width / 2) {
+            player?.position.x = 375 - (player!.size.width / 2)
+        }
+        else {
+            player?.position.x = playermove
+        }
+    }
+    
+    
+    
+    // called when two differents bitmasks collide
+    func didBegin(_ contact: SKPhysicsContact) {
+        
+        let collision = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
+
+        switch collision {
+        case groundCategory | poopCategory :
+            let poop = contact.bodyA.categoryBitMask == poopCategory ? contact.bodyA : contact.bodyB
+            poop.categoryBitMask = 0
+            let delayAction = SKAction.wait(forDuration: 0.2)
+            let removeAction = SKAction.run {
+                poop.node?.removeFromParent()
+                self.numObj -= 1
+            }
+            let sequence = SKAction.sequence([delayAction, removeAction])
+            run(sequence)
+            
+        case groundCategory | itemCategory :
+            let item = contact.bodyA.categoryBitMask == itemCategory ? contact.bodyA : contact.bodyB
+            item.categoryBitMask = 0
+            let delayAction = SKAction.wait(forDuration: 0.2)
+            let removeAction = SKAction.run {
+                item.node?.removeFromParent()
+                self.numObj -= 1
+            }
+            let sequence = SKAction.sequence([delayAction, removeAction])
+            run(sequence)
+            
+        case playerCategory | itemCategory :
+            let item = contact.bodyA.categoryBitMask == itemCategory ? contact.bodyA : contact.bodyB
+            item.categoryBitMask = 0
+            item.node?.removeFromParent()
+
+            // reset current datum position_touch position & player position
+            touchedDatumPoint = touchedLocation
+            playerDatumPoint = player!.position.x
+            
+            reverseDirection.toggle()
+            print(reverseDirection)
+
+            self.numObj -= 1
+            
+            
+        case playerCategory | poopCategory :
+            stopTimer()
+            player?.texture = SKTexture(imageNamed: "playerDead")
+            
+            let scene = GameOver(fileNamed: "GameOver")
+
+            // new record
+            if bestRecord < survivalTime {
+                UserDefaults.standard.set(survivalTime, forKey: "bestRecord")
+                scene!.newRecord = true
+            }
+            
+            scene!.bestRecord = bestRecord
+            scene!.survivalTime = survivalTime
+            scene!.scaleMode = .aspectFit
+            let transition = SKTransition.crossFade(withDuration: 3)
+            self.view?.presentScene(scene!, transition: transition)
+            
+        default :
+            break
+        }
+    }
+    
+    func startTimer() {
+        countTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateSurvivalTime), userInfo: nil, repeats: true)
+    }
+
+    func stopTimer() {
+        countTimer.invalidate()
+    }
+    
+    @objc func updateSurvivalTime() {
+        survivalTime += 1
+        currentSurvivalTimeLabel?.text = #"Survival Time : \#(survivalTime / 60)' \#(survivalTime % 60)""#
+        
+        if survivalTime % 5 == 0 {
+            maxObj += 1
+        }
     }
     
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
+        if (numObj < 6) {
+            dropObj()
+        }
     }
 }
