@@ -20,9 +20,9 @@
 		839D27F12A8DAB1D001199D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839D27EF2A8DAB1D001199D9 /* Main.storyboard */; };
 		839D27F32A8DAB1D001199D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 839D27F22A8DAB1D001199D9 /* Assets.xcassets */; };
 		839D27F62A8DAB1D001199D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839D27F42A8DAB1D001199D9 /* LaunchScreen.storyboard */; };
-		839D28002A8DAB1E001199D9 /* NC2_PracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839D27FF2A8DAB1E001199D9 /* NC2_PracticeTests.swift */; };
-		839D280A2A8DAB1E001199D9 /* NC2_PracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839D28092A8DAB1E001199D9 /* NC2_PracticeUITests.swift */; };
-		839D280C2A8DAB1E001199D9 /* NC2_PracticeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839D280B2A8DAB1E001199D9 /* NC2_PracticeUITestsLaunchTests.swift */; };
+		839D28002A8DAB1E001199D9 /* PoopsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839D27FF2A8DAB1E001199D9 /* PoopsTests.swift */; };
+		839D280A2A8DAB1E001199D9 /* PoopsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839D28092A8DAB1E001199D9 /* PoopsUITests.swift */; };
+		839D280C2A8DAB1E001199D9 /* PoopsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839D280B2A8DAB1E001199D9 /* PoopsUITestsLaunchTests.swift */; };
 		83B570732A9063F400F88370 /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B570722A9063F400F88370 /* GameOver.swift */; };
 		83B570752A90640B00F88370 /* GameOver.sks in Resources */ = {isa = PBXBuildFile; fileRef = 83B570742A90640B00F88370 /* GameOver.sks */; };
 		83F464B82A921E9800371CB6 /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B570722A9063F400F88370 /* GameOver.swift */; };
@@ -59,10 +59,10 @@
 		839D27F22A8DAB1D001199D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		839D27F52A8DAB1D001199D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		839D27FB2A8DAB1E001199D9 /* PoopsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoopsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		839D27FF2A8DAB1E001199D9 /* NC2_PracticeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NC2_PracticeTests.swift; sourceTree = "<group>"; };
+		839D27FF2A8DAB1E001199D9 /* PoopsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoopsTests.swift; sourceTree = "<group>"; };
 		839D28052A8DAB1E001199D9 /* PoopsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoopsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		839D28092A8DAB1E001199D9 /* NC2_PracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NC2_PracticeUITests.swift; sourceTree = "<group>"; };
-		839D280B2A8DAB1E001199D9 /* NC2_PracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NC2_PracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		839D28092A8DAB1E001199D9 /* PoopsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoopsUITests.swift; sourceTree = "<group>"; };
+		839D280B2A8DAB1E001199D9 /* PoopsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoopsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		83B570722A9063F400F88370 /* GameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
 		83B570742A90640B00F88370 /* GameOver.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOver.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,9 +103,9 @@
 		839D27D92A8DAB1D001199D9 = {
 			isa = PBXGroup;
 			children = (
-				839D27E42A8DAB1D001199D9 /* NC2_Practice */,
-				839D27FE2A8DAB1E001199D9 /* NC2_PracticeTests */,
-				839D28082A8DAB1E001199D9 /* NC2_PracticeUITests */,
+				839D27E42A8DAB1D001199D9 /* Poops */,
+				839D27FE2A8DAB1E001199D9 /* PoopsTests */,
+				839D28082A8DAB1E001199D9 /* PoopsUITests */,
 				839D27E32A8DAB1D001199D9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -120,7 +120,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		839D27E42A8DAB1D001199D9 /* NC2_Practice */ = {
+		839D27E42A8DAB1D001199D9 /* Poops */ = {
 			isa = PBXGroup;
 			children = (
 				832DEE482A907AD200B3F58C /* Poops-Info.plist */,
@@ -136,24 +136,24 @@
 				839D27F42A8DAB1D001199D9 /* LaunchScreen.storyboard */,
 				832DEE432A90784A00B3F58C /* Font */,
 			);
-			path = NC2_Practice;
+			path = Poops;
 			sourceTree = "<group>";
 		};
-		839D27FE2A8DAB1E001199D9 /* NC2_PracticeTests */ = {
+		839D27FE2A8DAB1E001199D9 /* PoopsTests */ = {
 			isa = PBXGroup;
 			children = (
-				839D27FF2A8DAB1E001199D9 /* NC2_PracticeTests.swift */,
+				839D27FF2A8DAB1E001199D9 /* PoopsTests.swift */,
 			);
-			path = NC2_PracticeTests;
+			path = PoopsTests;
 			sourceTree = "<group>";
 		};
-		839D28082A8DAB1E001199D9 /* NC2_PracticeUITests */ = {
+		839D28082A8DAB1E001199D9 /* PoopsUITests */ = {
 			isa = PBXGroup;
 			children = (
-				839D28092A8DAB1E001199D9 /* NC2_PracticeUITests.swift */,
-				839D280B2A8DAB1E001199D9 /* NC2_PracticeUITestsLaunchTests.swift */,
+				839D28092A8DAB1E001199D9 /* PoopsUITests.swift */,
+				839D280B2A8DAB1E001199D9 /* PoopsUITestsLaunchTests.swift */,
 			);
-			path = NC2_PracticeUITests;
+			path = PoopsUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,7 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				839D28002A8DAB1E001199D9 /* NC2_PracticeTests.swift in Sources */,
+				839D28002A8DAB1E001199D9 /* PoopsTests.swift in Sources */,
 				83F464B82A921E9800371CB6 /* GameOver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,8 +316,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				83F464B92A921E9800371CB6 /* GameOver.swift in Sources */,
-				839D280A2A8DAB1E001199D9 /* NC2_PracticeUITests.swift in Sources */,
-				839D280C2A8DAB1E001199D9 /* NC2_PracticeUITestsLaunchTests.swift in Sources */,
+				839D280A2A8DAB1E001199D9 /* PoopsUITests.swift in Sources */,
+				839D280C2A8DAB1E001199D9 /* PoopsUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
