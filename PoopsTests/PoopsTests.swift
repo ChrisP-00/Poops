@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import NC2_Practice
+@testable import Poops
 
 final class NC2_PracticeTests: XCTestCase {
 

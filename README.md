@@ -1,2 +1,2 @@
-# NC2_Practice
+# Poops
 Survive from poops 
