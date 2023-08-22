@@ -1,6 +1,6 @@
 //
 //  GameScene.swift
-//  NC2_Practice -> Poops
+//  Poops
 //
 //  Created by Park Jisoo on 2023/08/17.
 //
@@ -50,10 +50,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         characterIdleTextures.append(SKTexture(imageNamed: "playerIdle1"))
         characterIdleTextures.append(SKTexture(imageNamed: "playerIdle2"))
         
-        // player walk animation
-        characterWalkTextures.append(SKTexture(imageNamed: "playerWalk1"))
-        characterWalkTextures.append(SKTexture(imageNamed: "playerWalk2"))
-        
         playerAnimationIdle()
         
         // contactTestBitMask => Trigger, no interation
@@ -78,13 +74,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let animationIdleRepeat = SKAction.repeatForever(animationIdle)
         player!.run(animationIdleRepeat)
     }
-    
-    func playerAnimationWalk() {
-        let animationWalk = SKAction.animate(with: characterWalkTextures, timePerFrame: 0.5)
-        let animationIdleRepeat = SKAction.repeatForever(animationWalk)
-        player!.run(animationIdleRepeat)
-    }
-    
     
     
     // drop random objects
