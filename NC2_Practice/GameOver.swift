@@ -19,7 +19,6 @@ class GameOver: SKScene {
     private var bestRecordLabel : SKLabelNode?
     private var survivalTimeLabel : SKLabelNode?
     
-    
     override func didMove(to view: SKView) {
         
         self.gameOverLabel = self.childNode(withName: "//gameOver") as? SKLabelNode

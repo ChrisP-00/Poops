@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "playerRed_stand.png",
+      "filename" : "player.png",
       "idiom" : "universal",
       "scale" : "1x"
     },

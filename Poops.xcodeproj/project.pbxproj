@@ -48,8 +48,8 @@
 
 /* Begin PBXFileReference section */
 		832DEE442A90786100B3F58C /* Silom.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Silom.ttf; sourceTree = "<group>"; };
-		832DEE482A907AD200B3F58C /* NC2-Practice-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "NC2-Practice-Info.plist"; sourceTree = SOURCE_ROOT; };
-		839D27E22A8DAB1D001199D9 /* NC2_Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NC2_Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		832DEE482A907AD200B3F58C /* Poops-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Poops-Info.plist"; sourceTree = SOURCE_ROOT; };
+		839D27E22A8DAB1D001199D9 /* Poops.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poops.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		839D27E52A8DAB1D001199D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		839D27E72A8DAB1D001199D9 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		839D27E92A8DAB1D001199D9 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -58,9 +58,9 @@
 		839D27F02A8DAB1D001199D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		839D27F22A8DAB1D001199D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		839D27F52A8DAB1D001199D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		839D27FB2A8DAB1E001199D9 /* NC2_PracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NC2_PracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		839D27FB2A8DAB1E001199D9 /* PoopsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoopsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		839D27FF2A8DAB1E001199D9 /* NC2_PracticeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NC2_PracticeTests.swift; sourceTree = "<group>"; };
-		839D28052A8DAB1E001199D9 /* NC2_PracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NC2_PracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		839D28052A8DAB1E001199D9 /* PoopsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoopsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		839D28092A8DAB1E001199D9 /* NC2_PracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NC2_PracticeUITests.swift; sourceTree = "<group>"; };
 		839D280B2A8DAB1E001199D9 /* NC2_PracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NC2_PracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		83B570722A9063F400F88370 /* GameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
@@ -113,9 +113,9 @@
 		839D27E32A8DAB1D001199D9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				839D27E22A8DAB1D001199D9 /* NC2_Practice.app */,
-				839D27FB2A8DAB1E001199D9 /* NC2_PracticeTests.xctest */,
-				839D28052A8DAB1E001199D9 /* NC2_PracticeUITests.xctest */,
+				839D27E22A8DAB1D001199D9 /* Poops.app */,
+				839D27FB2A8DAB1E001199D9 /* PoopsTests.xctest */,
+				839D28052A8DAB1E001199D9 /* PoopsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,7 +123,7 @@
 		839D27E42A8DAB1D001199D9 /* NC2_Practice */ = {
 			isa = PBXGroup;
 			children = (
-				832DEE482A907AD200B3F58C /* NC2-Practice-Info.plist */,
+				832DEE482A907AD200B3F58C /* Poops-Info.plist */,
 				839D27E52A8DAB1D001199D9 /* AppDelegate.swift */,
 				839D27E92A8DAB1D001199D9 /* Actions.sks */,
 				839D27E72A8DAB1D001199D9 /* GameScene.sks */,
@@ -159,9 +159,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		839D27E12A8DAB1D001199D9 /* NC2_Practice */ = {
+		839D27E12A8DAB1D001199D9 /* Poops */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 839D280F2A8DAB1E001199D9 /* Build configuration list for PBXNativeTarget "NC2_Practice" */;
+			buildConfigurationList = 839D280F2A8DAB1E001199D9 /* Build configuration list for PBXNativeTarget "Poops" */;
 			buildPhases = (
 				839D27DE2A8DAB1D001199D9 /* Sources */,
 				839D27DF2A8DAB1D001199D9 /* Frameworks */,
@@ -171,14 +171,14 @@
 			);
 			dependencies = (
 			);
-			name = NC2_Practice;
+			name = Poops;
 			productName = NC2_Practice;
-			productReference = 839D27E22A8DAB1D001199D9 /* NC2_Practice.app */;
+			productReference = 839D27E22A8DAB1D001199D9 /* Poops.app */;
 			productType = "com.apple.product-type.application";
 		};
-		839D27FA2A8DAB1E001199D9 /* NC2_PracticeTests */ = {
+		839D27FA2A8DAB1E001199D9 /* PoopsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 839D28122A8DAB1E001199D9 /* Build configuration list for PBXNativeTarget "NC2_PracticeTests" */;
+			buildConfigurationList = 839D28122A8DAB1E001199D9 /* Build configuration list for PBXNativeTarget "PoopsTests" */;
 			buildPhases = (
 				839D27F72A8DAB1E001199D9 /* Sources */,
 				839D27F82A8DAB1E001199D9 /* Frameworks */,
@@ -189,14 +189,14 @@
 			dependencies = (
 				839D27FD2A8DAB1E001199D9 /* PBXTargetDependency */,
 			);
-			name = NC2_PracticeTests;
+			name = PoopsTests;
 			productName = NC2_PracticeTests;
-			productReference = 839D27FB2A8DAB1E001199D9 /* NC2_PracticeTests.xctest */;
+			productReference = 839D27FB2A8DAB1E001199D9 /* PoopsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		839D28042A8DAB1E001199D9 /* NC2_PracticeUITests */ = {
+		839D28042A8DAB1E001199D9 /* PoopsUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 839D28152A8DAB1E001199D9 /* Build configuration list for PBXNativeTarget "NC2_PracticeUITests" */;
+			buildConfigurationList = 839D28152A8DAB1E001199D9 /* Build configuration list for PBXNativeTarget "PoopsUITests" */;
 			buildPhases = (
 				839D28012A8DAB1E001199D9 /* Sources */,
 				839D28022A8DAB1E001199D9 /* Frameworks */,
@@ -207,9 +207,9 @@
 			dependencies = (
 				839D28072A8DAB1E001199D9 /* PBXTargetDependency */,
 			);
-			name = NC2_PracticeUITests;
+			name = PoopsUITests;
 			productName = NC2_PracticeUITests;
-			productReference = 839D28052A8DAB1E001199D9 /* NC2_PracticeUITests.xctest */;
+			productReference = 839D28052A8DAB1E001199D9 /* PoopsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -235,7 +235,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 839D27DD2A8DAB1D001199D9 /* Build configuration list for PBXProject "NC2_Practice" */;
+			buildConfigurationList = 839D27DD2A8DAB1D001199D9 /* Build configuration list for PBXProject "Poops" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -248,9 +248,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				839D27E12A8DAB1D001199D9 /* NC2_Practice */,
-				839D27FA2A8DAB1E001199D9 /* NC2_PracticeTests */,
-				839D28042A8DAB1E001199D9 /* NC2_PracticeUITests */,
+				839D27E12A8DAB1D001199D9 /* Poops */,
+				839D27FA2A8DAB1E001199D9 /* PoopsTests */,
+				839D28042A8DAB1E001199D9 /* PoopsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -326,12 +326,12 @@
 /* Begin PBXTargetDependency section */
 		839D27FD2A8DAB1E001199D9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 839D27E12A8DAB1D001199D9 /* NC2_Practice */;
+			target = 839D27E12A8DAB1D001199D9 /* Poops */;
 			targetProxy = 839D27FC2A8DAB1E001199D9 /* PBXContainerItemProxy */;
 		};
 		839D28072A8DAB1E001199D9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 839D27E12A8DAB1D001199D9 /* NC2_Practice */;
+			target = 839D27E12A8DAB1D001199D9 /* Poops */;
 			targetProxy = 839D28062A8DAB1E001199D9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -479,19 +479,20 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7UK5M23JTU;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "NC2-Practice-Info.plist";
+				INFOPLIST_FILE = "Poops-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Santa.NC2-Practice";
+				PRODUCT_BUNDLE_IDENTIFIER = Santa.Poops;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -511,19 +512,20 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7UK5M23JTU;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "NC2-Practice-Info.plist";
+				INFOPLIST_FILE = "Poops-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Santa.NC2-Practice";
+				PRODUCT_BUNDLE_IDENTIFIER = Santa.Poops;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -553,7 +555,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NC2_Practice.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NC2_Practice";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Poops.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Poops";
 			};
 			name = Debug;
 		};
@@ -576,7 +578,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NC2_Practice.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NC2_Practice";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Poops.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Poops";
 			};
 			name = Release;
 		};
@@ -625,7 +627,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		839D27DD2A8DAB1D001199D9 /* Build configuration list for PBXProject "NC2_Practice" */ = {
+		839D27DD2A8DAB1D001199D9 /* Build configuration list for PBXProject "Poops" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				839D280D2A8DAB1E001199D9 /* Debug */,
@@ -634,7 +636,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		839D280F2A8DAB1E001199D9 /* Build configuration list for PBXNativeTarget "NC2_Practice" */ = {
+		839D280F2A8DAB1E001199D9 /* Build configuration list for PBXNativeTarget "Poops" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				839D28102A8DAB1E001199D9 /* Debug */,
@@ -643,7 +645,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		839D28122A8DAB1E001199D9 /* Build configuration list for PBXNativeTarget "NC2_PracticeTests" */ = {
+		839D28122A8DAB1E001199D9 /* Build configuration list for PBXNativeTarget "PoopsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				839D28132A8DAB1E001199D9 /* Debug */,
@@ -652,7 +654,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		839D28152A8DAB1E001199D9 /* Build configuration list for PBXNativeTarget "NC2_PracticeUITests" */ = {
+		839D28152A8DAB1E001199D9 /* Build configuration list for PBXNativeTarget "PoopsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				839D28162A8DAB1E001199D9 /* Debug */,
