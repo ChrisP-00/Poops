@@ -18,6 +18,18 @@
 		8367FAE12A9459DB008C99F1 /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8367FADE2A9459DB008C99F1 /* StartScene.swift */; };
 		8367FAE22A945DCA008C99F1 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839D27EB2A8DAB1D001199D9 /* GameScene.swift */; };
 		8367FAE32A945DCA008C99F1 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839D27EB2A8DAB1D001199D9 /* GameScene.swift */; };
+		837C84272A958FC500846C77 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C84262A958FC500846C77 /* AudioManager.swift */; };
+		837C84292A9590ED00846C77 /* meowBGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 837C84282A9590ED00846C77 /* meowBGM.mp3 */; };
+		837C842A2A9590ED00846C77 /* meowBGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 837C84282A9590ED00846C77 /* meowBGM.mp3 */; };
+		837C842B2A9590ED00846C77 /* meowBGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 837C84282A9590ED00846C77 /* meowBGM.mp3 */; };
+		837C842D2A9593B800846C77 /* button.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 837C842C2A9593B800846C77 /* button.mp3 */; };
+		837C842E2A9593B800846C77 /* button.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 837C842C2A9593B800846C77 /* button.mp3 */; };
+		837C842F2A9593B800846C77 /* button.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 837C842C2A9593B800846C77 /* button.mp3 */; };
+		838471BA2A9598D900AB196E /* startMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 838471B92A9598D900AB196E /* startMusic.mp3 */; };
+		838471BC2A959A2C00AB196E /* gameSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 838471BB2A959A2C00AB196E /* gameSound.mp3 */; };
+		838E52FB2A95A4A00095B4F7 /* gameoverSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 838E52FA2A95A4A00095B4F7 /* gameoverSound.mp3 */; };
+		838E52FC2A95A4A00095B4F7 /* gameoverSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 838E52FA2A95A4A00095B4F7 /* gameoverSound.mp3 */; };
+		838E52FD2A95A4A00095B4F7 /* gameoverSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 838E52FA2A95A4A00095B4F7 /* gameoverSound.mp3 */; };
 		839D27E62A8DAB1D001199D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839D27E52A8DAB1D001199D9 /* AppDelegate.swift */; };
 		839D27E82A8DAB1D001199D9 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 839D27E72A8DAB1D001199D9 /* GameScene.sks */; };
 		839D27EA2A8DAB1D001199D9 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 839D27E92A8DAB1D001199D9 /* Actions.sks */; };
@@ -57,6 +69,12 @@
 		832DEE482A907AD200B3F58C /* Poops-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Poops-Info.plist"; sourceTree = SOURCE_ROOT; };
 		8367FADC2A945979008C99F1 /* StartScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StartScene.sks; sourceTree = "<group>"; };
 		8367FADE2A9459DB008C99F1 /* StartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
+		837C84262A958FC500846C77 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		837C84282A9590ED00846C77 /* meowBGM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = meowBGM.mp3; sourceTree = "<group>"; };
+		837C842C2A9593B800846C77 /* button.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = button.mp3; sourceTree = "<group>"; };
+		838471B92A9598D900AB196E /* startMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = startMusic.mp3; sourceTree = "<group>"; };
+		838471BB2A959A2C00AB196E /* gameSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameSound.mp3; sourceTree = "<group>"; };
+		838E52FA2A95A4A00095B4F7 /* gameoverSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameoverSound.mp3; sourceTree = "<group>"; };
 		839D27E22A8DAB1D001199D9 /* Poops.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poops.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		839D27E52A8DAB1D001199D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		839D27E72A8DAB1D001199D9 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -143,6 +161,12 @@
 				839D27ED2A8DAB1D001199D9 /* GameViewController.swift */,
 				839D27EF2A8DAB1D001199D9 /* Main.storyboard */,
 				839D27F22A8DAB1D001199D9 /* Assets.xcassets */,
+				837C842C2A9593B800846C77 /* button.mp3 */,
+				837C84282A9590ED00846C77 /* meowBGM.mp3 */,
+				838471B92A9598D900AB196E /* startMusic.mp3 */,
+				838471BB2A959A2C00AB196E /* gameSound.mp3 */,
+				838E52FA2A95A4A00095B4F7 /* gameoverSound.mp3 */,
+				837C84262A958FC500846C77 /* AudioManager.swift */,
 				839D27F42A8DAB1D001199D9 /* LaunchScreen.storyboard */,
 				832DEE432A90784A00B3F58C /* Font */,
 			);
@@ -274,9 +298,14 @@
 				8367FADD2A945979008C99F1 /* StartScene.sks in Resources */,
 				83B570752A90640B00F88370 /* GameOver.sks in Resources */,
 				839D27E82A8DAB1D001199D9 /* GameScene.sks in Resources */,
+				837C84292A9590ED00846C77 /* meowBGM.mp3 in Resources */,
 				839D27F32A8DAB1D001199D9 /* Assets.xcassets in Resources */,
+				837C842D2A9593B800846C77 /* button.mp3 in Resources */,
 				839D27F62A8DAB1D001199D9 /* LaunchScreen.storyboard in Resources */,
 				839D27EA2A8DAB1D001199D9 /* Actions.sks in Resources */,
+				838E52FB2A95A4A00095B4F7 /* gameoverSound.mp3 in Resources */,
+				838471BA2A9598D900AB196E /* startMusic.mp3 in Resources */,
+				838471BC2A959A2C00AB196E /* gameSound.mp3 in Resources */,
 				832DEE452A90786100B3F58C /* Silom.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,7 +314,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				837C842E2A9593B800846C77 /* button.mp3 in Resources */,
 				832DEE412A90781600B3F58C /* Assets.xcassets in Resources */,
+				838E52FC2A95A4A00095B4F7 /* gameoverSound.mp3 in Resources */,
+				837C842A2A9590ED00846C77 /* meowBGM.mp3 in Resources */,
 				832DEE462A90786100B3F58C /* Silom.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,7 +326,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				837C842F2A9593B800846C77 /* button.mp3 in Resources */,
 				832DEE422A90781600B3F58C /* Assets.xcassets in Resources */,
+				838E52FD2A95A4A00095B4F7 /* gameoverSound.mp3 in Resources */,
+				837C842B2A9590ED00846C77 /* meowBGM.mp3 in Resources */,
 				832DEE472A90786100B3F58C /* Silom.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				837C84272A958FC500846C77 /* AudioManager.swift in Sources */,
 				839D27EC2A8DAB1D001199D9 /* GameScene.swift in Sources */,
 				839D27EE2A8DAB1D001199D9 /* GameViewController.swift in Sources */,
 				839D27E62A8DAB1D001199D9 /* AppDelegate.swift in Sources */,

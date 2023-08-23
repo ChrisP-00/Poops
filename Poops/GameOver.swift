@@ -19,6 +19,12 @@ class GameOver: SKScene {
     private var bestRecordLabel : SKLabelNode?
     private var survivalTimeLabel : SKLabelNode?
     
+    override func sceneDidLoad() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
+            AudioManager.inst.playBGM(fileName: "startMusic", fileType: "mp3", numberOfLoops: -1)
+        })
+    }
+    
     override func didMove(to view: SKView) {
         
         self.gameOverLabel = self.childNode(withName: "//gameOver") as? SKLabelNode
@@ -37,16 +43,18 @@ class GameOver: SKScene {
         }
     }
     
-
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
             let location = touch.location(in: self)
             let touchedNode = atPoint(location)
             if touchedNode.name == "restart" {
+                AudioManager.inst.playBGM(fileName: "button", fileType: "mp3", numberOfLoops: 0)
                 newRecord = false
                 let scene = GameScene(fileNamed: "GameScene")
-                 scene?.scaleMode = .aspectFit
-                 self.view?.presentScene(scene)
+                scene?.scaleMode = .aspectFit
+                let transition = SKTransition.flipVertical(withDuration: 2)
+                self.view?.presentScene(scene!, transition: transition)
             }
         }
     }

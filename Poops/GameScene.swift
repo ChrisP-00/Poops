@@ -36,6 +36,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     private var reverseDirection = false
     private var datumPoint: CGFloat = 0
     
+    override func sceneDidLoad() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+            AudioManager.inst.playBGM(fileName: "gameSound", fileType: "mp3", numberOfLoops: -1)
+        })
+    }
+    
+    
     override func didMove(to view: SKView) {
         self.physicsWorld.contactDelegate = self
         
@@ -134,7 +141,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         } else {
             flipPlayer(dir: -1)
         }
-
+        
         if playermove < -375 + (player!.size.width / 2) {
             player?.position.x = -375 + (player!.size.width / 2)
         }
@@ -158,7 +165,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         } else {
             flipPlayer(dir: -1)
         }
-
+        
         if playermove < -375 + (player!.size.width / 2) {
             player?.position.x = -375 + (player!.size.width / 2)
         }
@@ -171,7 +178,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
-
+    
     // called when two differents categorybitmasks collide
     func didBegin(_ contact: SKPhysicsContact) {
         
@@ -216,6 +223,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
         case playerCategory | poopCategory :
             stopTimer()
+            
+            AudioManager.inst.playBGM(fileName: "gameoverSound", fileType: "mp3", numberOfLoops: 0)
+            
             player?.texture = SKTexture(imageNamed: "playerDead")
             
             let scene = GameOver(fileNamed: "GameOver")
@@ -229,7 +239,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             scene!.bestRecord = bestRecord
             scene!.survivalTime = survivalTime
             scene!.scaleMode = .aspectFit
-            let transition = SKTransition.crossFade(withDuration: 4)
+            let transition = SKTransition.crossFade(withDuration: 3)
             self.view?.presentScene(scene!, transition: transition)
             
         default :
